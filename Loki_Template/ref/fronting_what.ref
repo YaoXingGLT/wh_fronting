@@ -1,0 +1,183 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v280",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "var": {
+        "Expressive_Verb": "(?:互讚|偷問|允諾|冷答|[叼默][唸念]|吼道|呼籲|哀喊|嬌呼|強調|慌答|慟喊|描述|[改號佯宣謙謊聲]稱|歎道|爽回|狂呼|疾呼|痛批|發問|覺得|追問|闡述|驚喊|高喊|鼓吹|難得說|叨唸著|嗆明?|嘟嚷著|怨說?|表達出|道賀?|[公宣]佈|供[出稱]|叫[嚷道]|大[喊嗆]|寫[下說]|常[想說]|想[回過]|斷[言說]|答[稱說]|邊[唸說]|酸[嗆說]|開[嗆說]|齊[呼喊]|反[嗆批說]|唸[出說]?|喝[令斥罵]|嗔[叫說道]|急[呼說駁]|暗[叫批虧]|更[稱罵說]|哭[唱問求說]|回[問稱說]?|忙[問回答說]|猛[唸問喊說讚酸]|[勸念斥曰稱誇講]|直[叫問喊嗆想斥虧言誇]|笑[呼問喊嗆回斥言說談道]|喊(?:(?:叫著|[著道]))?|怒(?:斥著?|[問喊嗆回指稱罵言諷飆])|[前吵問嘆妙得微扯抄拗指接推掰搶教正氣照甫瞪紛老聊解認論還騙]說|說[著說]?)"
+    },
+    "utterance": {
+        "張三買了衛生紙": {
+            "id": "e219653e-bede-4692-85c1-2fed494d22ed",
+            "pos": "<ENTITY_person>張三</ENTITY_person><VerbP>買了</VerbP><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買了": [
+                    "租了",
+                    "購買了",
+                    "拿了",
+                    "買",
+                    "偷了",
+                    "想買",
+                    "帶了",
+                    "賣了",
+                    "買了",
+                    "借了",
+                    "送了"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>買了</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "張三不喜歡買衛生紙": {
+            "id": "5012c74f-6988-4034-b1df-dd42fdcaa706",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_negation>不</FUNC_negation><ACTION_verb>喜歡</ACTION_verb><ACTION_verb>買</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買": [
+                    "買進",
+                    "採買",
+                    "買東西",
+                    "收買",
+                    "賣",
+                    "採辦",
+                    "買",
+                    "買到",
+                    "買不到",
+                    "購得",
+                    "購買"
+                ],
+                "喜歡": [
+                    "愛戴",
+                    "熱愛",
+                    "喜歡",
+                    "憐愛",
+                    "愛過",
+                    "喜愛",
+                    "崇拜",
+                    "疼愛",
+                    "愛護",
+                    "深愛",
+                    "相愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><FUNC_negation>[^<]+</FUNC_negation><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>?<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "張三應該會買衛生紙": {
+            "id": "16ffa162-1239-494d-9a3a-02d280e03d06",
+            "pos": "<ENTITY_person>張三</ENTITY_person><MODAL>應該</MODAL><MODAL>會</MODAL><ACTION_verb>買</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買": [
+                    "購得",
+                    "買東西",
+                    "買",
+                    "採買",
+                    "賣",
+                    "吃",
+                    "買不起",
+                    "收買",
+                    "買進",
+                    "採辦",
+                    "購買"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person>(?:<MODAL>[^<]+</MODAL>)(?:<MODAL>[^<]+</MODAL>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "每個人都會買衛生紙": {
+            "id": "51bc5b59-941b-446f-be7e-9b6542e18e16",
+            "pos": "<ENTITY_DetPhrase>每個</ENTITY_DetPhrase><ENTITY_noun>人</ENTITY_noun><QUANTIFIER>都</QUANTIFIER><MODAL>會</MODAL><ACTION_verb>買</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買": [
+                    "採辦",
+                    "購得",
+                    "買東西",
+                    "買",
+                    "收買",
+                    "賣",
+                    "購買",
+                    "買到",
+                    "採買",
+                    "買進",
+                    "買不到"
+                ]
+            },
+            "pattern": "<ENTITY_DetPhrase>[^<]+</ENTITY_DetPhrase><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<QUANTIFIER>[^<]+</QUANTIFIER>)(?:<MODAL>[^<]+</MODAL>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "馬曉莉最喜歡衛生紙": {
+            "id": "3ff2f343-89c9-4a36-819f-ebe710e461d0",
+            "pos": "<ENTITY_person>馬曉莉</ENTITY_person><MODIFIER>最</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "喜歡": [
+                    "喜歡",
+                    "疼愛",
+                    "愛戴",
+                    "愛護",
+                    "熱愛",
+                    "崇拜",
+                    "喜愛",
+                    "相愛",
+                    "憐愛",
+                    "愛過",
+                    "深愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "李四到台北找到衛生紙": {
+            "id": "107b3b6c-8286-4c43-82b0-c4e4315512fc",
+            "pos": "<ENTITY_person>李四</ENTITY_person><ACTION_verb>到</ACTION_verb><LOCATION>台北</LOCATION><ACTION_verb>找到</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "到": [
+                    "到包",
+                    "到愛",
+                    "到約",
+                    "到死",
+                    "到隨",
+                    "到離",
+                    "到",
+                    "到了",
+                    "到回",
+                    "到經過",
+                    "到受"
+                ],
+                "找到": [
+                    "尋出",
+                    "尋得",
+                    "找著",
+                    "找到",
+                    "發現了",
+                    "尋找到",
+                    "尋回",
+                    "找到了",
+                    "尋覓",
+                    "覓得",
+                    "找出"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>[^<]+</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "李四買過好幾次衛生紙": {
+            "id": "2064f740-ffc3-4532-a0da-53f401629509",
+            "pos": "<ENTITY_person>李四</ENTITY_person><VerbP>買過</VerbP><FUNC_degreeHead>好</FUNC_degreeHead><CLAUSE_HowQ>幾</CLAUSE_HowQ><ACTION_eventQuantifier>次</ACTION_eventQuantifier><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買過": [
+                    "收過",
+                    "懷疑過",
+                    "送過",
+                    "想買",
+                    "遇過",
+                    "吃過",
+                    "問過",
+                    "買過",
+                    "喜歡過",
+                    "賣過",
+                    "碰過"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><FUNC_degreeHead>[^<]+</FUNC_degreeHead><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><ACTION_eventQuantifier>[^<]+</ACTION_eventQuantifier><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

@@ -1,0 +1,229 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v280",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "var": {
+        "Expressive_Verb": "(?:互讚|偷問|允諾|冷答|[叼默][唸念]|吼道|呼籲|哀喊|嬌呼|強調|慌答|慟喊|描述|[改號佯宣謙謊聲]稱|歎道|爽回|狂呼|疾呼|痛批|發問|覺得|追問|闡述|驚喊|高喊|鼓吹|難得說|叨唸著|嗆明?|嘟嚷著|怨說?|表達出|道賀?|[公宣]佈|供[出稱]|叫[嚷道]|大[喊嗆]|寫[下說]|常[想說]|想[回過]|斷[言說]|答[稱說]|邊[唸說]|酸[嗆說]|開[嗆說]|齊[呼喊]|反[嗆批說]|唸[出說]?|喝[令斥罵]|嗔[叫說道]|急[呼說駁]|暗[叫批虧]|更[稱罵說]|哭[唱問求說]|回[問稱說]?|忙[問回答說]|猛[唸問喊說讚酸]|[勸念斥曰稱誇講]|直[叫問喊嗆想斥虧言誇]|笑[呼問喊嗆回斥言說談道]|喊(?:(?:叫著|[著道]))?|怒(?:斥著?|[問喊嗆回指稱罵言諷飆])|[前吵問嘆妙得微扯抄拗指接推掰搶教正氣照甫瞪紛老聊解認論還騙]說|說[著說]?)"
+    },
+    "utterance": {
+        "李四喜歡台北": {
+            "id": "a5326e11-f38d-4945-a7a0-1ac2057545ca",
+            "pos": "<ENTITY_person>李四</ENTITY_person><ACTION_verb>喜歡</ACTION_verb><LOCATION>台北</LOCATION>",
+            "lexy": {
+                "喜歡": [
+                    "喜歡",
+                    "疼愛",
+                    "愛戴",
+                    "愛護",
+                    "熱愛",
+                    "崇拜",
+                    "喜愛",
+                    "相愛",
+                    "憐愛",
+                    "愛過",
+                    "深愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        },
+        "張三不喜歡台北": {
+            "id": "5427e1da-91e8-47db-81b8-f48a01c35cf8",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_negation>不</FUNC_negation><ACTION_verb>喜歡</ACTION_verb><LOCATION>台北</LOCATION>",
+            "lexy": {
+                "喜歡": [
+                    "愛戴",
+                    "熱愛",
+                    "喜歡",
+                    "憐愛",
+                    "愛過",
+                    "喜愛",
+                    "崇拜",
+                    "疼愛",
+                    "愛護",
+                    "深愛",
+                    "相愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><FUNC_negation>[^<]+</FUNC_negation><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        },
+        "張三騎機車去台北": {
+            "id": "58cf3432-7db1-41b1-92a6-f32d5efe2894",
+            "pos": "<ENTITY_person>張三</ENTITY_person><ACTION_verb>騎</ACTION_verb><ENTITY_noun>機車</ENTITY_noun><ACTION_verb>去</ACTION_verb><LOCATION>台北</LOCATION>",
+            "lexy": {
+                "去": [
+                    "趕去",
+                    "跑去",
+                    "去",
+                    "來",
+                    "去了",
+                    "出去",
+                    "想去",
+                    "回去",
+                    "跑來",
+                    "回來",
+                    "要去"
+                ],
+                "騎": [
+                    "騎乘",
+                    "有騎",
+                    "騎著",
+                    "騎衛",
+                    "騎進",
+                    "騎",
+                    "騎車",
+                    "騎出",
+                    "騎了",
+                    "騎下",
+                    "騎馬"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        },
+        "張三去台北玩好幾次": {
+            "id": "6fc2541d-6d5b-4bf4-b11b-5debef2adbde",
+            "pos": "<ENTITY_person>張三</ENTITY_person><ACTION_verb>去</ACTION_verb><LOCATION>台北</LOCATION><ACTION_verb>玩</ACTION_verb><FUNC_degreeHead>好</FUNC_degreeHead><CLAUSE_HowQ>幾</CLAUSE_HowQ><ACTION_eventQuantifier>次</ACTION_eventQuantifier>",
+            "lexy": {
+                "去": [
+                    "趕去",
+                    "跑去",
+                    "去",
+                    "來",
+                    "去了",
+                    "出去",
+                    "想去",
+                    "回去",
+                    "跑來",
+                    "回來",
+                    "要去"
+                ],
+                "玩": [
+                    "玩耍",
+                    "遊玩",
+                    "玩著",
+                    "玩樂",
+                    "買東西",
+                    "玩",
+                    "玩狎",
+                    "散步",
+                    "打電動",
+                    "玩了",
+                    "玩忽"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>?<FUNC_degreeHead>[^<]+</FUNC_degreeHead><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><ACTION_eventQuantifier>[^<]+</ACTION_eventQuantifier>"
+        },
+        "張三和李四去台北玩": {
+            "id": "978ee021-a669-4c97-81b3-abe3bbed6c01",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_conjunction>和</FUNC_conjunction><ENTITY_person>李四</ENTITY_person><ACTION_verb>去</ACTION_verb><LOCATION>台北</LOCATION><ACTION_verb>玩</ACTION_verb>",
+            "lexy": {
+                "去": [
+                    "來",
+                    "回來",
+                    "要去",
+                    "去了",
+                    "趕去",
+                    "跑去",
+                    "跑來",
+                    "回去",
+                    "去",
+                    "想去",
+                    "出去"
+                ],
+                "玩": [
+                    "散步",
+                    "遊玩",
+                    "玩水",
+                    "逛",
+                    "買東西",
+                    "玩了",
+                    "玩樂",
+                    "玩",
+                    "玩狎",
+                    "玩著",
+                    "玩忽"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<ENTITY_person>[^<]+</ENTITY_person>)?<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>"
+        },
+        "張三在台北看到瑪麗": {
+            "id": "34a3b79c-c26c-47d4-abbd-87c32cd70853",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_inner>在</FUNC_inner><LOCATION>台北</LOCATION><ACTION_verb>看到</ACTION_verb><ENTITY_person>瑪麗</ENTITY_person>",
+            "lexy": {
+                "看到": [
+                    "瞥見",
+                    "看見",
+                    "聽到",
+                    "見到",
+                    "感覺到",
+                    "看見了",
+                    "看過",
+                    "瞅見",
+                    "看到",
+                    "瞧見",
+                    "睇見"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person>(?:<FUNC_in(?:ner|ter)>[^<]+</FUNC_in(?:ner|ter)>)<LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><ENTITY_person>[^<]+</ENTITY_person>"
+        },
+        "李四到台北找到張三": {
+            "id": "8a29bd44-34db-4fcb-82f1-0a1fadf7ea07",
+            "pos": "<ENTITY_person>李四</ENTITY_person><ACTION_verb>到</ACTION_verb><LOCATION>台北</LOCATION><ACTION_verb>找到</ACTION_verb><ENTITY_person>張三</ENTITY_person>",
+            "lexy": {
+                "到": [
+                    "到包",
+                    "到愛",
+                    "到約",
+                    "到死",
+                    "到隨",
+                    "到離",
+                    "到",
+                    "到了",
+                    "到回",
+                    "到經過",
+                    "到受"
+                ],
+                "找到": [
+                    "尋出",
+                    "尋到",
+                    "找著",
+                    "尋得",
+                    "找到",
+                    "發現了",
+                    "尋找",
+                    "找到了",
+                    "尋覓",
+                    "覓得",
+                    "找出"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_person>[^<]+</ENTITY_person>)"
+        },
+        "張三和李四在台北見面": {
+            "id": "767b1145-5a53-40b0-931a-b6bd962a012d",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_conjunction>和</FUNC_conjunction><ENTITY_person>李四</ENTITY_person><FUNC_inner>在</FUNC_inner><LOCATION>台北</LOCATION><ACTION_verb>見面</ACTION_verb>",
+            "lexy": {
+                "見面": [
+                    "碰面",
+                    "碰見",
+                    "相聚",
+                    "照面",
+                    "相見",
+                    "會面",
+                    "撞見",
+                    "相逢",
+                    "會合",
+                    "見面",
+                    "遇見"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><FUNC_conjunction>[^<]+</FUNC_conjunction>(?:<ENTITY_person>[^<]+</ENTITY_person>)?(?:<FUNC_in(?:ner|ter)>[^<]+</FUNC_in(?:ner|ter)>)?<LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

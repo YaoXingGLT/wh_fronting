@@ -1,0 +1,163 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v280",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "var": {
+        "Expressive_Verb": "(?:互讚|偷問|允諾|冷答|[叼默][唸念]|吼道|呼籲|哀喊|嬌呼|強調|慌答|慟喊|描述|[改號佯宣謙謊聲]稱|歎道|爽回|狂呼|疾呼|痛批|發問|覺得|追問|闡述|驚喊|高喊|鼓吹|難得說|叨唸著|嗆明?|嘟嚷著|怨說?|表達出|道賀?|[公宣]佈|供[出稱]|叫[嚷道]|大[喊嗆]|寫[下說]|常[想說]|想[回過]|斷[言說]|答[稱說]|邊[唸說]|酸[嗆說]|開[嗆說]|齊[呼喊]|反[嗆批說]|唸[出說]?|喝[令斥罵]|嗔[叫說道]|急[呼說駁]|暗[叫批虧]|更[稱罵說]|哭[唱問求說]|回[問稱說]?|忙[問回答說]|猛[唸問喊說讚酸]|[勸念斥曰稱誇講]|直[叫問喊嗆想斥虧言誇]|笑[呼問喊嗆回斥言說談道]|喊(?:(?:叫著|[著道]))?|怒(?:斥著?|[問喊嗆回指稱罵言諷飆])|[前吵問嘆妙得微扯抄拗指接推掰搶教正氣照甫瞪紛老聊解認論還騙]說|說[著說]?)"
+    },
+    "utterance": {
+        "張三不喜歡王小明": {
+            "id": "2e913455-76e5-4216-b510-ee750e9fe949",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_negation>不</FUNC_negation><ACTION_verb>喜歡</ACTION_verb><ENTITY_person>王小明</ENTITY_person>",
+            "lexy": {
+                "喜歡": [
+                    "愛戴",
+                    "熱愛",
+                    "喜歡",
+                    "憐愛",
+                    "愛過",
+                    "喜愛",
+                    "崇拜",
+                    "疼愛",
+                    "愛護",
+                    "深愛",
+                    "相愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><FUNC_negation>[^<]+</FUNC_negation><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><ENTITY_person>([^<]+)</ENTITY_person>"
+        },
+        "馬小莉喜歡王小明": {
+            "id": "03f9e638-1f15-4be6-9d06-802dddd3bce1",
+            "pos": "<ENTITY_person>馬小莉</ENTITY_person><ACTION_verb>喜歡</ACTION_verb><ENTITY_person>王小明</ENTITY_person>",
+            "lexy": {
+                "喜歡": [
+                    "崇拜",
+                    "愛過",
+                    "愛戴",
+                    "深愛",
+                    "相愛",
+                    "愛護",
+                    "喜愛",
+                    "喜歡",
+                    "熱愛",
+                    "憐愛",
+                    "疼愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><ENTITY_person>([^<]+)</ENTITY_person>"
+        },
+        "馬小莉最喜歡王小明": {
+            "id": "b125fe99-3d20-4173-b9ae-68a3a7c7376b",
+            "pos": "<ENTITY_person>馬小莉</ENTITY_person><MODIFIER>最</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ENTITY_person>王小明</ENTITY_person>",
+            "lexy": {
+                "喜歡": [
+                    "愛戴",
+                    "熱愛",
+                    "喜歡",
+                    "憐愛",
+                    "愛過",
+                    "喜愛",
+                    "崇拜",
+                    "疼愛",
+                    "愛護",
+                    "深愛",
+                    "相愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><ENTITY_person>([^<]+)</ENTITY_person>"
+        },
+        "王小名不給馬曉莉看照片": {
+            "id": "96c09884-e14f-49b4-8219-6207e8eb5374",
+            "pos": "<ENTITY_person>王小名</ENTITY_person><FUNC_negation>不</FUNC_negation><ACTION_verb>給</ACTION_verb><ENTITY_person>馬曉莉</ENTITY_person><ACTION_verb>看</ACTION_verb><ENTITY_noun>照片</ENTITY_noun>",
+            "lexy": {
+                "看": [
+                    "觀看",
+                    "光顧",
+                    "收看",
+                    "看護",
+                    "看顧",
+                    "探望",
+                    "看",
+                    "看守",
+                    "看望",
+                    "探看",
+                    "看戲"
+                ],
+                "給": [
+                    "留給",
+                    "帶給",
+                    "發放",
+                    "提供",
+                    "交給",
+                    "分給",
+                    "給聖",
+                    "資助",
+                    "給",
+                    "給老",
+                    "供給"
+                ]
+            },
+            "pattern": "<ENTITY_person>([^<]+)</ENTITY_person><FUNC_negation>[^<]+</FUNC_negation><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_person>[^<]+</ENTITY_person>)?<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "馬曉莉見過王曉明很多次": {
+            "id": "06707334-7f17-4aed-8c4c-0a619149eac0",
+            "pos": "<ENTITY_person>馬曉莉</ENTITY_person><VerbP>見過</VerbP><ENTITY_person>王曉明</ENTITY_person><DegreeP>很多次</DegreeP>",
+            "lexy": {
+                "見過": [
+                    "遇到過",
+                    "聽過",
+                    "看到過",
+                    "看過",
+                    "遇過",
+                    "聽說過",
+                    "再見過",
+                    "見過",
+                    "問過",
+                    "接觸過",
+                    "碰過"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_person>([^<]+)</ENTITY_person>)<DegreeP>[^<]+</DegreeP>"
+        },
+        "馬曉莉想看王曉明拍的照片": {
+            "id": "e5609f5e-a075-4ab2-bb9b-3e142f023cb8",
+            "pos": "<ENTITY_person>馬曉莉</ENTITY_person><ACTION_verb>想看</ACTION_verb><ENTITY_person>王曉明</ENTITY_person><ACTION_verb>拍</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_noun>照片</ENTITY_noun>",
+            "lexy": {
+                "拍": [
+                    "想拍",
+                    "重拍",
+                    "拍",
+                    "拍完",
+                    "拍片",
+                    "拍過",
+                    "拍出",
+                    "拍了",
+                    "拍攝",
+                    "拍手",
+                    "拍攝了"
+                ],
+                "想看": [
+                    "想寫",
+                    "常看",
+                    "愛看",
+                    "看得懂",
+                    "看了",
+                    "有聽過",
+                    "想看",
+                    "有看過",
+                    "想問",
+                    "看過",
+                    "想聽"
+                ]
+            },
+            "pattern": "<ENTITY_person>([^<]+)</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_person>[^<]+</ENTITY_person>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<FUNC_in(?:ner|ter)>[^<]+</FUNC_in(?:ner|ter)>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>[^<]+</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
